@@ -1,5 +1,14 @@
+@import "reset.scss";
+
 body {
   background: #ACCEEC;
   color: #005CC5;
   text-align: center;
 }
+
+#app {
+  height: 100vh;
+}
+
+@import "main.scss";
+@import "sidebar.scss";
