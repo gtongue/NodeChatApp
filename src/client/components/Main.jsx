@@ -7,9 +7,8 @@ class Main extends Component {
     super(props);
     this.state = {
       messages: [
-        "Hello world",
-        "Don't let your dreams be memes.",
-        "Hello thiccness my old friend"
+        "Don't let your memes be dreams",
+        "This is what Harambe would have wanted"
       ]
     };
 
