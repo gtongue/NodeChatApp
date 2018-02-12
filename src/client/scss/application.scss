@@ -4,6 +4,7 @@ body {
   background: #ACCEEC;
   color: #005CC5;
   text-align: center;
+  font-family: sans-serif;
 }
 
 #app {
@@ -14,3 +15,4 @@ body {
 @import "sidebar.scss";
 @import "chat_input.scss";
 @import "chat_window.scss";
+@import "messages.scss";

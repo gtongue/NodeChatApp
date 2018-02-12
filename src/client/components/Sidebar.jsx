@@ -11,6 +11,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div id="sidebar">
+        <p id="banner">Obvious Slack Knockoff</p>
       </div>
     );
   }
