@@ -10,12 +10,12 @@ class ChatInput extends Component {
 
   render() {
     return (
-      <div>
-        <form action="">
-          <input
+      <div id="chat-input">
+        <form id="input-form" action="">
+          <input id="input-field"
             type="text"
             placeholder="julien sucks"/>
-          <button disabled="disabled">Send</button>
+          <input id="submit-button" type="submit" value="Send" />
         </form>
       </div>
     );

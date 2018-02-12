@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChatInput from './ChatInput.jsx';
+import ChatWindow from './ChatWindow.jsx';
 
 class Main extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class Main extends Component {
   render() {
     return (
       <div id="main">
-        Main
+        <ChatWindow />
         <ChatInput />
       </div>
     );

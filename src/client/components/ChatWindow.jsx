@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Sidebar extends Component {
+class ChatWindow extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -10,10 +10,10 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div id="sidebar">
+      <div id="chat-window">
       </div>
     );
   }
 }
 
-export default Sidebar;
+export default ChatWindow;
