@@ -17,10 +17,14 @@ class Main extends Component {
   }
 
   addMessage(message) {
+    if (!message || message.length === 0) return;
     const newMessages = this.state.messages.splice(0);
     newMessages.push(message);
     this.setState({
       messages: newMessages
+    }, () => {
+      const messageIndex = document.getElementById("message-index");
+      messageIndex.scrollTop = messageIndex.scrollHeight;
     });
   }
 
