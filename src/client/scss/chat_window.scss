@@ -1,4 +1,11 @@
+#chat-window:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
 #chat-window {
-  border: 1px solid indigo;
+  text-align: center;
   height: 80%;
 }

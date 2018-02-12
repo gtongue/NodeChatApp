@@ -5,11 +5,12 @@
   color: black;
   border-radius: 4px;
   margin: auto;
-  margin-top: 74px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .message {
-  padding: 20px;
+  padding: 20px 40px;
   border-bottom: 1px solid lightgray;
 }
 
