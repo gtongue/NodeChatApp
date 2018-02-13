@@ -12,11 +12,15 @@ app.get('/', function(req, res,next) {
 });
 
 io.on('connection', function (socket) {
-  console.log("new client connecteD");
+  console.log("new client connected" , socket);
   socket.emit('news', { hello: 'world' });
   socket.on('my other event', function (data) {
     console.log(data);
   });
+});
+
+io.on('message', (socket) => {
+  socket.broadcast.emit('message', {content: "this is a test message"});
 });
 
 server.listen(3000, () => {

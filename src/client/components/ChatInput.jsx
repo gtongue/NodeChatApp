@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class ChatInput extends Component {
   constructor(props) {
     super(props);
+    this.onSubmit = this.onSubmit.bind(this);
     this.state = {
 
     };
@@ -11,15 +12,21 @@ class ChatInput extends Component {
   render() {
     return (
       <div>
-        <form action="">
+        <form action="" onSubmit = {this.onSubmit}>
           <input
             type="text"
             placeholder="julien sucks"/>
-          <button disabled="disabled">Send</button>
+          <input type="submit"/>
         </form>
       </div>
     );
   }
+
+  onSubmit(e){
+    e.preventDefault();
+    console.log(e);
+  }
+
 }
 
 export default ChatInput;
