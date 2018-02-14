@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const server = require("http").Server(app);
-const io = require("socket.io")(server);
+const io = require("socket.io")(server, {wsEngine: "ws"});
 const path = require("path");
 
 
@@ -12,10 +12,10 @@ app.get('/', function(req, res,next) {
 });
 
 io.on('connection', function (socket) {
-  console.log("new client connected" , socket);
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
+  console.log("new client connected" , socket.handshake.address);
+  socket.on("send_message", (data) => {
+    console.log("Broadcasting message: " + data.message);
+    socket.broadcast.emit("receive_message", data);
   });
 });
 

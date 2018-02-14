@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Main from './Main.jsx';
 import Sidebar from './Sidebar.jsx';
-// import io from "socket.io";
+import socketIOClient from "socket.io-client";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    // window.socket = io.connect();
+    this.socket = socketIOClient();
     this.state = {
 
     };
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div id="app">
         <Sidebar />
-        <Main />
+        <Main socket = {this.socket}/>
       </div>
     );
   }

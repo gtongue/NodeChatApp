@@ -5,14 +5,15 @@ import ChatWindow from './ChatWindow.jsx';
 class Main extends Component {
   constructor(props) {
     super(props);
+    this.socket = props.socket;
     this.state = {
       messages: [
         "Don't let your memes be dreams",
         "This is what Harambe would have wanted"
       ]
     };
-
     this.addMessage = this.addMessage.bind(this);
+    this.socket.on("receive_message", data => this.addMessage(data.message));
   }
 
   addMessage(message) {
@@ -31,7 +32,7 @@ class Main extends Component {
     return (
       <div id="main">
         <ChatWindow messages={this.state.messages}/>
-        <ChatInput addMessage={this.addMessage}/>
+        <ChatInput socket = {this.socket} addMessage={this.addMessage}/>
       </div>
     );
   }
