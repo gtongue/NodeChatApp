@@ -36,6 +36,10 @@ const config = {
      }
     ],
 
+  },
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '*'],
   }
 };
 

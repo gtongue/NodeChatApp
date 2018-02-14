@@ -11,7 +11,7 @@ class Sidebar extends Component {
   render() {
     return (
       <div id="sidebar">
-        Sidebar
+        <p id="banner">NodeChatApp</p>
       </div>
     );
   }

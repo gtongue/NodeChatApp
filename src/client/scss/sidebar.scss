@@ -1,5 +1,13 @@
 #sidebar {
-  display: inline-block;
+  display: block;
+  float: left;
   height: 100vh;
   width: 20%;
+  background-color: indigo;
+}
+
+#banner {
+  color: white;
+  font-size: 28px;
+  margin-top: 40px;
 }
