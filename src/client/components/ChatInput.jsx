@@ -22,6 +22,10 @@ class ChatInput extends Component {
     e.preventDefault();
     this.props.addMessage(this.state.text);
     this.socket.emit("send_message", {message: this.state.text});
+    this.setState({
+      text: null
+    });
+    document.getElementById("input-field").value = null;
   }
 
   render() {
@@ -31,10 +35,10 @@ class ChatInput extends Component {
           onSubmit={this.handleSubmit}>
           <input id="input-field"
             type="text"
-            placeholder="#vapenayshe"
+            placeholder="Your message here"
             onChange={this.handleInput}/>
           <input id="submit-button" 
-            type="submit" 
+            type="submit"
             value="Send"/>
         </form>
       </div>

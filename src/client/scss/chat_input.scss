@@ -35,3 +35,8 @@
   font-weight: 600;
   width: 20%;
 }
+
+#submit-button:hover {
+  background-color: mediumpurple;
+  transition: background-color 300ms ease-out;
+}

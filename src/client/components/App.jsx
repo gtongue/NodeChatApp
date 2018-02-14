@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Main from './Main.jsx';
+import MainWindow from './MainWindow.jsx';
 import Sidebar from './Sidebar.jsx';
 import socketIOClient from "socket.io-client";
 
@@ -16,7 +16,7 @@ class App extends Component {
     return (
       <div id="app">
         <Sidebar />
-        <Main socket = {this.socket}/>
+        <MainWindow socket = {this.socket}/>
       </div>
     );
   }

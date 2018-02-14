@@ -11,7 +11,10 @@ class MessageIndex extends Component {
     return (
       <div id="message-index">
         <ul>
-          { messages.map(message => (<li><Message body={message}/></li>)) }
+          { 
+            messages.map((message, index) =>
+              (<li key={index}><Message body={message}/></li>))
+          }
         </ul>
       </div>
     );
