@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserIndex from './UserIndex.jsx';
 
 class Sidebar extends Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class Sidebar extends Component {
     return (
       <div id="sidebar">
         <p id="banner">NodeChatApp</p>
+        <UserIndex />
       </div>
     );
   }

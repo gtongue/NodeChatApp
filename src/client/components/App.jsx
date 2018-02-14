@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Main from './Main.jsx';
+import MainWindow from './MainWindow.jsx';
 import Sidebar from './Sidebar.jsx';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div id="app">
         <Sidebar />
-        <Main />
+        <MainWindow />
       </div>
     );
   }

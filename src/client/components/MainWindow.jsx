@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import ChatInput from './ChatInput.jsx';
 import ChatWindow from './ChatWindow.jsx';
 
-class Main extends Component {
+class MainWindow extends Component {
   constructor(props) {
     super(props);
     this.state = {
       messages: [
-        "Don't let your memes be dreams",
-        "This is what Harambe would have wanted"
+        "Hello",
+        "World"
       ]
     };
 
@@ -37,4 +37,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default MainWindow;
